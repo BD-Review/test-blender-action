@@ -1,0 +1,11 @@
+name: Check Markdown links
+on: workflow_dispatch
+jobs:
+  blender-version:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: moguri/setup-blender@v1
+        with:
+          blender-version: '4.2'
+      - run: blender --version
